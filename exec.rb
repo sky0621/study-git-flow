@@ -46,6 +46,7 @@ class FizzBuzzExecutor
 	end
 
 	def show
+		# 7が最優先なのは仕様
 		if @no % 7 == 0
 			GitHub.new.show
 		elsif @no % 11 == 0

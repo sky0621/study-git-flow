@@ -38,14 +38,14 @@ class FizzBuzzExecutor
 	end
 
 	def show
-		if @no % 3 == 0 && @no % 5 == 0
+		if @no % 7 == 0
+			GitHub.new.show
+		elsif @no % 3 == 0 && @no % 5 == 0
 			FizzBuzz.new.show
 		elsif @no % 3 == 0
 			Fizz.new.show
 		elsif @no % 5 == 0
 			Buzz.new.show
-		elsif @no % 7 == 0
-			GitHub.new.show
 		else
 			p @no
 		end

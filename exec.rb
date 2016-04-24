@@ -23,6 +23,14 @@ class GitHub
 
 end
 
+class Git
+
+	def show
+		p "Git!"
+	end
+
+end
+
 class FizzBuzz
 
 	def show
@@ -38,14 +46,17 @@ class FizzBuzzExecutor
 	end
 
 	def show
-		if @no % 3 == 0 && @no % 5 == 0
+		# 7が最優先なのは仕様
+		if @no % 7 == 0
+			GitHub.new.show
+		elsif @no % 11 == 0
+			Git.new.show
+		elsif @no % 3 == 0 && @no % 5 == 0
 			FizzBuzz.new.show
 		elsif @no % 3 == 0
 			Fizz.new.show
 		elsif @no % 5 == 0
 			Buzz.new.show
-		elsif @no % 7 == 0
-			GitHub.new.show
 		else
 			p @no
 		end

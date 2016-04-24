@@ -23,6 +23,14 @@ class GitHub
 
 end
 
+class Git
+
+	def show
+		p "Git!"
+	end
+
+end
+
 class FizzBuzz
 
 	def show
@@ -40,6 +48,8 @@ class FizzBuzzExecutor
 	def show
 		if @no % 7 == 0
 			GitHub.new.show
+		elsif @no % 11 == 0
+			Git.new.show
 		elsif @no % 3 == 0 && @no % 5 == 0
 			FizzBuzz.new.show
 		elsif @no % 3 == 0
